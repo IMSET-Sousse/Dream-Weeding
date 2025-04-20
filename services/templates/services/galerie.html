@@ -1,0 +1,10 @@
+{% for article in articles %}
+    <div>
+        <h3>{{ article.titre }}</h3>
+        <p>{{ article.description }}</p>
+        {% if article.image %}
+            <img src="{{ article.image.url }}" alt="{{ article.titre }}" />
+        {% endif %}
+    </div>
+{% endfor %}
+

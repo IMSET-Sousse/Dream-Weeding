@@ -1,11 +1,11 @@
-
 from django.db import models
-from django.utils import timezone
 
 class Article(models.Model):
-    titre = models.CharField(max_length=200)
-    contenu = models.TextField()
-    date_creation = models.DateTimeField(default=timezone.now)
-    
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    image = models.ImageField(upload_to='Article/')
+
     def __str__(self):
-        return self.titre
+        return self.title
+
+

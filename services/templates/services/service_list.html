@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nos Services</title>
+</head>
+<body>
+    <h1>Nos Services</h1>
+    {% for service in services %}
+        <div>
+            <h2>{{ service.title }}</h2>
+            <p>{{ service.description }}</p>
+            {% if service.image %}
+                <img src="{{ service.image.url }}" alt="{{ service.title }}" width="300">
+            {% endif %}
+        </div>
+    {% endfor %}
+</body>
+</html>

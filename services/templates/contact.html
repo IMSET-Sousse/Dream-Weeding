@@ -1,0 +1,7 @@
+
+</form><form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}  <!-- Affiche les champs du formulaire -->
+    <button type="submit">Envoyer</button>
+</form>
+
