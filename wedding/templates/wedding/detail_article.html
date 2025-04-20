@@ -1,0 +1,12 @@
+{% extends 'wedding/base.html' %}
+
+{% block title %}{{ article.titre }} - {{ block.super }}{% endblock %}
+
+{% block content %}
+<article>
+    <h2>{{ article.titre }}</h2>
+    <p>{{ article.contenu }}</p>
+    <p><small>Publié le {{ article.date_creation|date:"d/m/Y" }}</small></p>
+    <a href="{% url 'wedding:liste_articles' %}">Retour à la liste</a>
+</article>
+{% endblock %}
